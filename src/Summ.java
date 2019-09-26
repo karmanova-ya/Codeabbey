@@ -1,17 +1,22 @@
-//Sum "A+B" 22.03.2018
+// 22.03.2018
+//1. We need to sum two numbers and tell the result
+import java.util.Scanner;
 
 public class Summ {
-    private int a;
-    private int b;
-    private int c;
 
-    Summ (int a, int b){
-        this.a = a;
-        this.b = b;
+    public int countSumm() {
+        Scanner read = new Scanner(System.in);
+        String str = read.nextLine();
+        String[] s = str.split(" ");
+
+        int countSumm = Integer.valueOf(s[0]) + Integer.valueOf(s[1]);
+        return countSumm;
     }
 
-    public void countSumm(){
-        c=a+b;
-        System.out.println(c);
+    public static void main(String[] args) {
+        Summ summ = new Summ();
+
+        System.out.println("input data: ");
+        System.out.println("answer: \n"+ summ.countSumm());
     }
 }
